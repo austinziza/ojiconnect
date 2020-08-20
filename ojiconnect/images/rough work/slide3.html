@@ -1,0 +1,91 @@
+
+<html>
+<head>
+<title>my site</title>
+<script src="java.js"></script>
+<style>
+.slider {
+  width: 100%;
+  background-color: lightgray;
+  margin: 10px auto;
+  height: 200px;
+}
+
+.slidercontainer {
+  width: 85%;
+  height: 200px;
+  margin: 0px auto;
+}
+
+.sliderspot {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: gray;
+  display: inline;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.sliderspot:hover {
+  background-color: black;
+}
+
+.spot1 {
+  margin: 85px 30px;
+  float: left;
+}
+
+.spot2 {
+  margin: 85px 30px;
+  float: right;
+}
+
+#sliderul {
+  list-style-type: none;
+  margin-left: 4%;
+  width: 75%;
+  text-align: center;
+  height: 150px;
+  padding: 10px;
+  line-height: 30px;
+  display: inline-block;
+}
+
+.slidercontent {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #1D1F20;
+}
+
+.slidercontent span {
+  font-size: 18px;
+  display: block;
+  margin-top: 10px;
+  color: #343436;
+}
+
+</style>
+
+
+
+</head>
+<body>
+<div class="slider">
+  <div class="slidercontainer">
+    <div class="sliderspot  spot1"> </div>
+    <ul id="sliderul">
+      <li class="slidercontent1"> "The first quotation."
+        <span> This first author. </span> </li>
+      <li class="slidercontent2"> "The second quotation." <span> The second author. </span> </li>
+    </ul>
+    <div class="sliderspot spot2"> </div>
+  </div>
+</div>
+
+
+
+
+
+<body>
+</html>

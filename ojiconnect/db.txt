@@ -1,0 +1,46 @@
+<?php
+
+$con = mysqli_connect("localhost","id14369568_austinziza","~Wkt5WM-0Vjf#r(=", "id14369568_ojiconnect");
+    if (mysqli_connect_errno()){
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	die();
+	}
+
+
+?>
+
+
+
+<?php
+include 'connection.php';
+$sql = "
+SELECT * FROM `comments` WHERE `articleid` = 2 ORDER BY `articleid` DESC   " ;
+$result = mysqli_query($con, $sql);
+
+ $row = mysqli_num_rows($result);
+ if (mysqli_num_rows($result) > 0) {
+
+while ($row = mysqli_fetch_array($result)) {
+	echo "<center>";
+	
+	echo "<table cellspacing=0 cellspacing=0 border=0 width=80%>";
+	echo "<tr>";
+	echo "<th>".   "<font color=#0099ff;>"  .  "<p>"."&nbsp;&nbsp;&nbsp;&nbsp;" .$row['name']."</p>". "at&nbsp;&nbsp;". $row['timestamp']. "</font>" . "</th>";   
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td>". "<center>". "<p>" ."<font size=3px; color=#000000; >"  . $row['comment']. "</font>". "</p>". "</center>". "</td>" ;
+	echo "</tr>";
+	echo "</table>" . "<br>";
+	
+	echo "</center>";
+}	
+}
+
+else{
+    echo "failed to display table";
+}
+
+
+
+mysqli_close($con);
+?>

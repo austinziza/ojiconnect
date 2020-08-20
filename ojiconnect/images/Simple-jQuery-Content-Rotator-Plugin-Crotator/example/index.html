@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Content Rotator</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="crotator">
+		<div id="quotes">
+			<p><b style="color:red">Darkness</b> cannot drive out darkness: Only light can do that. Hate cannot drive out hate: Only love can do that.</p>
+			<p>Live as if you were to die tomorrow. Learn as if you were to live forever. </p>
+			<p>Yesterday is history, tomorrow is mystery, today is a gift of god, which is why we call it the present.</p>
+			<p>Not all of us can do great things. But we can do small things with great love.</p>
+			<p>Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.</p>
+			<p>The woods are lovely, dark, and deep, but I have promises to keep, and miles to go before I sleep, and miles to go before I sleep.</p>
+		</div>
+
+		<div id="authors">
+			<p>- Martin Luther King Jr.</p>
+			<p>- Mahatma Gandhi</p>
+			<p>- Bil Keane</p>
+			<p>- Mother Teresa</p>
+			<p>- Albert Einstein</p>
+			<p>- Robert Frost</p>
+		</div>
+	</div>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="../jquery.crotator.js"></script>
+	<script>
+
+		// Calling with user defined timeline
+		$("#quotes").crotator({
+			// timeline (in seconds)
+			timeArray: [2, 20, 14, 9, 3, 10],
+			// terminate after display the last element
+			cycle: false,
+			typeofTag: "<h3/>",
+			tagClass: "quotes"
+		});
+
+		// calling with some options
+		$("#authors").crotator({
+			// starting with empty node
+			startEmpty: false,
+			// time of existence of each slide (in seconds)
+			timeofExistence: 2,
+			typeofTag: "<h4/>",
+			tagClass: "authors"
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+  background-color: #fff;
+    background: blue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgba(0,64,255,0),rgba(0,64,255,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(0,64,255,0),rgba(0,64,255,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(0,64,255,0),rgba(0,64,255,1)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(0,64,255,0), rgba(0,64,255,1)); /*Standard*/
+}
+
+#quoteArea {
+  border: 1px solid white;
+  width: 500px;
+  height: auto;
+  margin: 5% auto;
+  padding: 15px;
+  background-color:rgba(226, 232, 109, 0.4);
+  border-radius: 15px;
+  box-shadow: -8px 8px 8px rgba(100,100,100,.8);
+}
+
+#quoteAuthor {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1em;
+}
+
+#quoteItself{
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+}
